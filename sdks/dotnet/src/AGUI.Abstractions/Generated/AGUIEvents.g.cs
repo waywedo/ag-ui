@@ -645,6 +645,7 @@ public sealed class RunStartedEvent : BaseEvent
     /// separate run rather than as a subagent within one.
     /// </summary>
     [JsonPropertyName("parentRunId")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public string? ParentRunId { get; set; }
 
     /// <summary>
