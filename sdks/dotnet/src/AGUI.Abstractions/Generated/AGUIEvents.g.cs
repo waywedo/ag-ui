@@ -645,6 +645,7 @@ public sealed class RunStartedEvent : BaseEvent
     /// separate run rather than as a subagent within one.
     /// </summary>
     [JsonPropertyName("parentRunId")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public string? ParentRunId { get; set; }
 
     /// <summary>
@@ -652,6 +653,7 @@ public sealed class RunStartedEvent : BaseEvent
     /// did not make the request can still see what the agent was asked.
     /// </summary>
     [JsonPropertyName("input")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public RunAgentInput? Input { get; set; }
 }
 

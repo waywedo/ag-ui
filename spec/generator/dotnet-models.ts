@@ -92,6 +92,8 @@ const DEFAULT_OMISSION_FIELDS = new Set([
   "Tool.parameters",
   "RunAgentInput.protocolVersion",
   "RunStartedEvent.protocolVersion",
+  "RunStartedEvent.parentRunId",
+  "RunStartedEvent.input",
   "TextMessageStartEvent.role",
   "BaseEvent.timestamp",
   "BaseEvent.rawEvent",
